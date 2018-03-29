@@ -12,3 +12,25 @@
 #### 2.Socket  APP通过局域网与模块连接，实现本地控制。
 #### 3.MQTT  APP与模块通过MQTT服务器，实现远程控制。
 
+
+
+
+##### Socket通信：
+
+##### 实现方法：
+##### //客户端socket
+##### 
+#####
+##### @property (nonatomic) GCDAsyncSocket *clinetSocket;
+
+      //1、初始化
+      self.clinetSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
+      
+      //2.开始连接
+      ipAddress = KNIP;
+        port = KNIPPORT;
+        [SVProgressHUD showWithStatus:@"正在连接"];
+        NSError *err;
+        [self.clinetSocket connectToHost:ipAddress onPort:port withTimeout:10.0f error:&err];
+
+
