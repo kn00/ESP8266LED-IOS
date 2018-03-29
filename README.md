@@ -15,9 +15,8 @@
 
 
 
-##### Socket通信：
-
-##### 实现方法：
+### Socket通信
+##### 简单实现方法：
 
       //客户端socket
       @property (nonatomic) GCDAsyncSocket *clinetSocket;
