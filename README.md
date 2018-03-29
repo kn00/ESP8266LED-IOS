@@ -18,10 +18,9 @@
 ##### Socket通信：
 
 ##### 实现方法：
-##### //客户端socket
-##### 
-#####
-##### @property (nonatomic) GCDAsyncSocket *clinetSocket;
+
+      //客户端socket
+      @property (nonatomic) GCDAsyncSocket *clinetSocket;
 
       //1、初始化
       self.clinetSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
@@ -32,5 +31,9 @@
         [SVProgressHUD showWithStatus:@"正在连接"];
         NSError *err;
         [self.clinetSocket connectToHost:ipAddress onPort:port withTimeout:10.0f error:&err];
+        
+      //3.监听回调
+      
+      //4.发送和接收数据
 
 
