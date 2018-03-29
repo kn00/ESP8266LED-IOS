@@ -32,8 +32,12 @@
         NSError *err;
         [self.clinetSocket connectToHost:ipAddress onPort:port withTimeout:10.0f error:&err];
         
-      //3.监听回调
+      //3.监听回调
       
-      //4.发送和接收数据
+      //4.发送和接收数据
+        
+      
+      
+    
 
 
